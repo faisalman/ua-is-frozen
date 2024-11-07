@@ -1,7 +1,7 @@
 {
   "title": "isFrozenUA",
   "name": "ua-is-frozen",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Faisal Salman <f@faisalman.com>",
   "description": "A freeze-test for your user-agent string",
   "type": "commonjs",
@@ -23,7 +23,7 @@
   },
   "scripts": {
     "build:cjs": "tsc --module commonjs --outDir ./dist/cjs --target es5",
-    "build:esm": "tsc --module esnext --outDir ./dist/esm --target es6",
+    "build:esm": "tsc --module esnext --outDir ./dist/esm --target es6 && echo '{\"type\":\"module\"}' > ./dist/esm/package.json",
     "test": "mocha ./test"
   },
   "repository": {
